@@ -126,10 +126,58 @@
         <div class="position-absolute w-100 h-50 bg-dark bottom-0 start-0"></div>
         <div class="row d-flex align-items-center position-relative justify-content-center px-0 g-5">
           <div class="col-12 col-lg-6">
-            <video class="w-100 rounded-5 shadow pt-5 pb-5" controls playsinline>
-              <source src="images/home.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <style>
+              .video-container {
+                position: relative;
+                width: 100%;
+                max-width: 100%; /* Adjust as needed */
+                margin: auto;
+              }
+            
+              .video-thumbnail {
+                width: 100%;
+                border-radius: 20px;
+                cursor: pointer;
+                display: block;
+              }
+            
+              .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0, 0, 0, 0.6);
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              }
+            
+              .play-button::after {
+                content: '▶';
+                font-size: 40px;
+                color: white;
+              }
+            
+              .video-container video {
+                display: none;
+                width: 100%;
+                border-radius: 20px;
+              }
+            </style>
+            
+            <div class="video-container mt-5 mb-5">
+              <img src="images/thumbnailabout.jpg" alt="Video Thumbnail" class="video-thumbnail" onclick="playVideo()">
+              <div class="play-button" onclick="playVideo()"></div>
+              <video id="video" class="w-100 rounded-5 shadow pt-5 pb-5" controls playsinline>
+                <source src="images/home.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <img src="img/abstract6.jpg" width="1116" height="1578" alt="abstract image"
@@ -449,6 +497,18 @@
         document.getElementById('consistent-menu').classList.remove('is-active');
       }
     });
+  </script>
+  <script>
+    function playVideo() {
+      const video = document.getElementById("video");
+      const thumbnail = document.querySelector(".video-thumbnail");
+      const playButton = document.querySelector(".play-button");
+  
+      thumbnail.style.display = "none";
+      playButton.style.display = "none";
+      video.style.display = "block";
+      video.play();
+    }
   </script>
 </body>
 
