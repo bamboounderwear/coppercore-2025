@@ -249,19 +249,42 @@ h1, h2, h3 {
 /* Hero Section */
 .hero-section {
   position: relative;
-  min-height: 50vh; /* Changed from 100vh to 50vh */
+  min-height: 50vh;
   display: flex;
   align-items: center;
-  background-image: url('/images/hero-co.jpg');
+  background-image: url('/images/copper-landscape.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
 }
 
+.hero-section:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 150px; /* Adjust this value to control fade height */
+  background: linear-gradient(to bottom, transparent, rgba(17, 17, 17, 1));
+  pointer-events: none;
+}
+
 .hero-section .container {
   position: relative;
   z-index: 2;
+}
+
+/* Update mobile styles */
+@media (max-width: 991px) {
+  .hero-section {
+    background-attachment: scroll;
+    padding: 50px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
 }
 
 .hero-section h1 {
@@ -324,15 +347,6 @@ h1, h2, h3 {
   .consistent-menu-inner {
     flex-direction: column;
     gap: 1.5rem;
-  }
-
-  .hero-section {
-    background-attachment: scroll;
-    padding: 50px 0; /* Reduced padding for mobile */
-  }
-  
-  .hero-section h1 {
-    font-size: clamp(2rem, 6vw, 3.5rem);
   }
 }
 
