@@ -253,7 +253,7 @@ h1, h2, h3 {
   padding: 60px 0; /* Reduced padding to fit smaller height */
   display: flex;
   align-items: center;
-  background-image: url('/images/copper-landscape.jpg');
+  background-image: url('/images/hero-co.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
