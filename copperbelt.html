@@ -251,6 +251,20 @@
     }
   });
 </script>
+
+<script>
+  function playVideo() {
+    const video = document.getElementById("video");
+    const thumbnail = document.querySelector(".video-thumbnail");
+    const playButton = document.querySelector(".play-button");
+
+    thumbnail.style.display = "none";
+    playButton.style.display = "none";
+    video.style.display = "block";
+    video.play();
+  }
+</script>
+
 </body>
 
 </html>
