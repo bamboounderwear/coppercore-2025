@@ -250,7 +250,6 @@ h1, h2, h3 {
 .hero-section {
   position: relative;
   min-height: 50vh; /* Changed from 100vh to 50vh */
-  padding: 60px 0; /* Reduced padding to fit smaller height */
   display: flex;
   align-items: center;
   background-image: url('/images/hero-co.jpg');
