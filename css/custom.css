@@ -252,7 +252,7 @@ h1, h2, h3 {
   min-height: 50vh;
   display: flex;
   align-items: center;
-  background-image: url('/images/copper-landscape.jpg');
+  background-image: url('/images/hero-co.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -265,7 +265,7 @@ h1, h2, h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 150px; /* Adjust this value to control fade height */
+  height: 300px; /* Adjust this value to control fade height */
   background: linear-gradient(to bottom, transparent, rgba(17, 17, 17, 1));
   pointer-events: none;
 }
