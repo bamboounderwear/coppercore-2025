@@ -246,10 +246,11 @@ h1, h2, h3 {
   color: var(--white);
 }
 
+/* Hero Section */
 .hero-section {
   position: relative;
-  min-height: 100vh;
-  padding: 120px 0;
+  min-height: 50vh; /* Changed from 100vh to 50vh */
+  padding: 60px 0; /* Reduced padding to fit smaller height */
   display: flex;
   align-items: center;
   background-image: url('/images/copper-landscape.jpg');
@@ -328,7 +329,7 @@ h1, h2, h3 {
 
   .hero-section {
     background-attachment: scroll;
-    padding: 100px 0;
+    padding: 50px 0; /* Reduced padding for mobile */
   }
   
   .hero-section h1 {
